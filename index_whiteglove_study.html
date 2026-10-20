@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Premium Messaging Study</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="An 8-minute study on how premium fashion brands should message their clients. MBA research, University of Greenwich.">
+<meta property="og:title" content="How should premium brands message you?">
+<meta property="og:description" content="8-minute study for an MBA dissertation. Anonymous, mobile-friendly.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#f4f4f2;--card:#fff;--ink:#1d1d1b;--mute:#6b6b66;--line:#d9d9d4;--fill:#ececE8;--soft:#f8f8f6}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:480px;margin:0 auto;padding:16px 16px 140px}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:24px;line-height:1.25;margin:0 0 10px}h2{font-size:19px;line-height:1.3;margin:0 0 10px}
+p{margin:0 0 12px}.mute{color:var(--mute);font-size:14px}.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+ul{padding-left:20px;margin:0 0 12px}li{margin-bottom:4px}
+/* bottom bar: next + section dots */
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.bar-in{max-width:480px;margin:0 auto}
+.btn{display:block;width:100%;padding:14px;border:0;border-radius:12px;background:var(--ink);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.3;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-top:8px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:10px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--ink);width:20px;border-radius:4px}.dots i.done{background:#9a9a94}
+.hint{text-align:center;font-size:12px;color:var(--mute);margin-top:6px;min-height:16px}
+/* storyboard */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:240px}
+.scene{height:120px;border-radius:10px;margin-bottom:14px;display:grid;place-items:center;font-size:13px;color:var(--mute);
+  background:repeating-linear-gradient(45deg,var(--soft),var(--soft) 8px,var(--fill) 8px,var(--fill) 9px);border:1px dashed var(--line)}
+.storydots{display:flex;gap:5px;justify-content:center;margin-top:12px}.storydots i{width:6px;height:6px;border-radius:50%;background:var(--line)}.storydots i.on{background:var(--ink)}
+/* phone + chat */
+.phone{background:var(--fill);border:1px solid var(--line);border-radius:22px;padding:12px;margin-bottom:6px}
+.chat-head{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mute);padding:2px 4px 10px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--ink);flex:none}
+.chat-head b{display:block;color:var(--ink);font-size:14px}
+.bubble{background:var(--card);border:1px solid var(--line);border-radius:4px 16px 16px 16px;padding:12px;max-width:92%;margin-bottom:8px;animation:pop .25s ease-out}
+.bubble.me{margin-left:auto;border-radius:16px 4px 16px 16px;background:var(--soft)}
+.tile{display:flex;gap:10px;align-items:center;margin-top:10px;padding:8px;border:1px dashed var(--line);border-radius:8px;font-size:14px}
+.tile .img{flex:none;width:46px;height:46px;border-radius:6px;background:repeating-linear-gradient(45deg,var(--fill),var(--fill) 6px,var(--line) 6px,var(--line) 7px)}
+.typing{display:inline-flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--mute);animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+.notif{width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px;font:inherit;font-size:14px;color:var(--ink);animation:pop .3s ease-out both}
+.notif b{display:block;font-size:12px;color:var(--mute);font-weight:500}
+button.notif{cursor:pointer}
+.lock{text-align:center;color:var(--mute);font-size:13px;margin:4px 0 10px}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+/* questions */
+.q{margin:22px 0}.q-label{font-weight:600;margin-bottom:8px}.req{color:var(--mute);font-weight:400;font-size:13px}
+.scale{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.scale button,.opts button,.chips button{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:10px;font:inherit;color:var(--ink);cursor:pointer;min-height:44px}
+.scale button[aria-pressed=true],.opts button[aria-pressed=true],.chips button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ends{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--mute);margin-top:4px}.ends span:last-child{text-align:right}
+.opts{display:grid;gap:8px}.opts button{padding:10px 12px;text-align:left}
+.opts.two{grid-template-columns:1fr 1fr}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips button{padding:8px 14px;border-radius:999px;min-height:40px}
+textarea,input[type=text],input[type=email],select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;background:var(--card);color:var(--ink)}
+textarea{min-height:84px;resize:vertical}
+.check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.check:last-child{border-bottom:0}.check input{margin-top:3px;width:20px;height:20px;flex:none;accent-color:#1d1d1b}
+.choice{display:block;width:100%;text-align:left;padding:12px;margin-bottom:8px;border:1px solid var(--line);border-radius:12px;background:var(--card);font:inherit;font-size:14px;color:var(--ink);cursor:pointer}
+.choice[aria-pressed=true]{border:2px solid var(--ink);padding:11px}
+.choice b{display:block;font-size:12px;color:var(--mute);font-weight:500;margin-bottom:2px}
+.debug{font:12px/1.4 ui-monospace,Menlo,monospace;background:#fff8d6;border:1px solid #e6d77a;border-radius:6px;padding:6px 8px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<div class="bar"><div class="bar-in">
+  <button class="btn" id="next" type="button">Start</button>
+  <div class="hint" id="hint"></div>
+  <div class="dots" id="dots"></div>
+</div></div>
+<script>
+/* ============================================================
+   CONFIG — paste your Apps Script web-app URL; nothing else needs editing
+   ============================================================ */
+const CONFIG = {
+  SHEET_URL: 'https://script.google.com/macros/s/AKfycbxilJ1hijeKiJlEhPhkiofDp9EGGleHhAYu6ZMD-l5N_FGlB3MXJQmk1tXUk0V2IxOk/exec',
+  SURVEY_VERSION: 'v3.1',
+  CONTACT_EMAIL: '', // researcher email shown on the consent page, e.g. your university email
+  RETENTION: 'until the dissertation is marked, then deleted (by 31 Dec 2027 at the latest)',
+  FRAMEWORK: 'White-Glove Guardrail Framework', // internal only — never shown to participants
+  BRAND: 'Maison Vale',
+  ADVISER: 'Priscilla',
+  PUSH_LIMIT: 2,
+  ZONES: { greenMax: 4, amberMax: 11 } // provisional: green 1–4 · amber 5–11 · red 12+
+};
+
+/* ============================================================
+   SCORING — Intrusion Risk C = Show × Personal × Source × 2^(Push − limit)
+   Show:     1 no explanation of how the brand knows · 2 hints at the basis · 3 spells out the data trail
+   Personal: 1 product / style · 2 occasion, routine, relationship · 3 intimate life event
+   Source:   1 client told us · 2 brand's own records (purchases, browsing) · 3 off-platform / third party
+   Push:     proactive product messages this week
+   ============================================================ */
+const score = m => m.show * m.personal * m.source * Math.pow(2, Math.max(0, m.push - CONFIG.PUSH_LIMIT));
+const zone = s => s <= CONFIG.ZONES.greenMax ? 'green' : s <= CONFIG.ZONES.amberMax ? 'amber' : 'red';
+const quadrant = m => { const hs = m.show >= 3, hp = m.personal >= 2; return hs && hp ? 'Surveillance' : hs ? 'Algorithmic' : hp ? 'Concierge' : 'Generic'; };
+
+/* ============================================================
+   STIMULI — 8 messages, 3 blocks (shown in random order)
+   A  2×2 matrix: Show (1 vs 3) × Personal (1 vs 2); Source 2, Push 1 held constant
+   B  amplifiers on A2: Source 3; Push 4
+   C  guardrail recovery of A4: identical softened text (Show 3→2), AI assistant vs named adviser
+   ============================================================ */
+const SCARF = 'Ivory Silk Scarf · S$400';
+const MESSAGES = [
+  { id:'A1', block:'A', cell:'Generic', show:1, personal:1, source:2, push:1, sender:'assistant', type:'chat',
+    text:'Good afternoon. Our new ivory silk scarf has just arrived. Would you like me to set one aside for you?' },
+  { id:'A2', block:'A', cell:'Algorithmic', show:3, personal:1, source:2, push:1, sender:'assistant', type:'chat',
+    text:"We noticed you've viewed the Ivory Silk Scarf 7 times this week. It has just arrived. Would you like me to set one aside for you?" },
+  { id:'A3', block:'A', cell:'Concierge', show:1, personal:2, source:2, push:1, sender:'assistant', type:'chat',
+    text:'Good afternoon. For your anniversary, our new ivory silk scarf might be just the thing. Would you like me to set one aside for you?' },
+  { id:'A4', block:'A', cell:'Surveillance', show:3, personal:2, source:2, push:1, sender:'assistant', type:'chat', why:true,
+    text:"We noticed you buy a gift from us every February, so your anniversary must be coming up. Our new ivory silk scarf has just arrived. Would you like me to set one aside for you?" },
+  { id:'B1', block:'B', cell:'Amplifier: Source', show:3, personal:1, source:3, push:1, sender:'assistant', type:'chat',
+    text:"We saw you've been liking silk scarves on Instagram. Our new ivory silk scarf has just arrived. Would you like me to set one aside for you?" },
+  { id:'B2', block:'B', cell:'Amplifier: Push', show:3, personal:1, source:2, push:4, sender:'assistant', type:'stack', why:true,
+    items:[ ['Mon 10:02','20% off silk scarves. Ends Friday.'],
+            ['Wed 13:45',"We noticed you've viewed the Ivory Silk Scarf 7 times. Only 2 left!"],
+            ['Thu 19:30','Ends tomorrow: your scarf is waiting.'],
+            ['Fri 21:15',"Last chance tonight. Don't miss out."] ] },
+  { id:'C1', block:'C', cell:'Recovery: AI soften', show:2, personal:2, source:2, push:1, sender:'assistant', type:'chat',
+    text:'Good afternoon. February is coming round again, and our new ivory silk scarves have just arrived. Would you like to book a private viewing, or shall I send photos first?' },
+  { id:'C2', block:'C', cell:'Recovery: Human handover', show:2, personal:2, source:2, push:1, sender:'adviser', type:'chat', why:true,
+    text:`Hello, it's ${'Priscilla'}. February is coming round again, and our new ivory silk scarves have just arrived. Would you like to book a private viewing, or shall I send photos first?` }
+];
+const NOT_ADJACENT = [['C1','C2'],['A3','C1'],['A2','B2']]; // near-identical pairs kept apart
+
+const RATINGS = [
+  { key:'r_premium', label:'How premium does this feel?', lo:'Mass-market', hi:'Private client' },
+  { key:'r_creepy',  label:'How creepy or intrusive does this feel?', lo:'Not at all', hi:'Very creepy' },
+  { key:'r_knows',   label:'This message shows the brand knows a lot about me.', lo:'Strongly disagree', hi:'Strongly agree' },
+  { key:'r_intent',  label:'How likely would you reply, book or buy?', lo:'Very unlikely', hi:'Very likely' }
+];
+const ATTN_INDEX = 4; // attention check shown on the 5th message
+const EMOTIONS = ['Valued','Delighted','Reassured','Neutral','Uneasy','Watched','Pressured','Annoyed'];
+const AUTHOR = ['A person at the brand','AI / automated','Not sure'];
+
+const SECTIONS = ['Welcome','Consent','About you','The story','Messages','Wrap-up'];
+const STORY = [
+  { scene:'Boutique', text:`You've been a client of <b>${CONFIG.BRAND}</b>, a premium fashion house, for <b>five years</b>.` },
+  { scene:'Your adviser', text:`Your in-store adviser, <b>${CONFIG.ADVISER}</b>, knows your style. You bought a <b>linen coat</b> in March, and you've bought a <b>gift here every February</b> for the past few years.` },
+  { scene:'Browsing', text:`Lately you've been looking for a <b>silk scarf</b> (around S$300–500), on the ${CONFIG.BRAND} app and on social media.` },
+  { scene:'The app chat', text:`${CONFIG.BRAND}'s app now has a chat where both ${CONFIG.ADVISER} and the brand's digital assistant can message you. This is a usual chat:`, demo:true },
+  { scene:'Your task', text:`Next, you'll receive <b>8 messages</b> in that chat. Tap each one to open it, then rate your <b>first impression</b>. There are no right or wrong answers.` }
+];
+
+const NATIONALITIES = ['Singaporean','Malaysian','Chinese','Indian','Indonesian','Filipino','Vietnamese','Thai','South Korean','Japanese','Australian','British','American','Other'];
+const COUNTRIES = ['Singapore','Malaysia','China','India','Indonesia','Philippines','Vietnam','Thailand','South Korea','Japan','Australia','United Kingdom','United States','Other'];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const params = new URLSearchParams(location.search);
+const DEBUG = params.has('debug'), TEST = params.has('test') || DEBUG;
+const SRC = (params.get('src') || 'direct').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 30) || 'direct';
+let DONE_BEFORE = false; try { DONE_BEFORE = !TEST && localStorage.getItem('wgs_done') === '1'; } catch (e) {}
+const PID = params.get('pid') || ('P-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)).toUpperCase();
+const app = document.getElementById('app'), nextBtn = document.getElementById('next'), hint = document.getElementById('hint'), dots = document.getElementById('dots');
+const S = { step:'welcome', story:0, i:0, order:[], consent:{}, about:{}, ans:{}, revealed:false, wrap:{}, startedAt:new Date().toISOString(), t0:0 };
+
+function shuffle(a){ a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function buildOrder(){
+  const bad = (x, y) => NOT_ADJACENT.some(([p, q]) => (x === p && y === q) || (x === q && y === p));
+  for (let t = 0; t < 500; t++){ const o = shuffle(MESSAGES); if (o.every((m, k) => k === 0 || !bad(m.id, o[k - 1].id))) return o; }
+  return shuffle(MESSAGES);
+}
+
+/* ============================================================
+   DATA — one POST per row → Google Sheets (Apps Script)
+   ============================================================ */
+function send(sheet, row, anonymous){
+  row = Object.assign(anonymous ? {} : { pid:PID, test:TEST }, { client_time:new Date().toISOString(), survey_version:CONFIG.SURVEY_VERSION }, row);
+  if (DEBUG) console.log('[send]', sheet, row);
+  if (!/^https:\/\//.test(CONFIG.SHEET_URL)){ console.warn('SHEET_URL not set — row not sent'); return; }
+  fetch(CONFIG.SHEET_URL, { method:'POST', mode:'no-cors', keepalive:true,
+    headers:{ 'Content-Type':'text/plain;charset=utf-8' }, body:JSON.stringify({ sheet, row }) }).catch(e => console.warn(e));
+}
+
+/* ============================================================
+   UI HELPERS
+   ============================================================ */
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const R = '<span class="req"> · required</span>', O = '<span class="req"> · optional</span>';
+function sectionOf(step){ return { welcome:0, consent:1, about:2, story:3, msg:4, wrap:5, done:5 }[step]; }
+function secTop(){ const k = sectionOf(S.step); return `<div class="top"><span>Section ${k + 1} of ${SECTIONS.length}</span><span>${SECTIONS[k]}</span></div>`; }
+function scaleQ(q, val){
+  return `<div class="q"><div class="q-label">${q.label}${R}</div><div class="scale" role="group" aria-label="${esc(q.label)}">${
+    [1,2,3,4,5,6,7].map(n => `<button type="button" data-k="${q.key}" data-v="${n}" aria-pressed="${val == n}">${n}</button>`).join('')}</div>
+    ${q.lo ? `<div class="ends"><span>1 · ${q.lo}</span><span>7 · ${q.hi}</span></div>` : ''}</div>`;
+}
+function optsQ(key, label, options, val, cls = ''){
+  return `<div class="q"><div class="q-label">${label}${R}</div><div class="opts ${cls}">${
+    options.map(o => `<button type="button" data-k="${key}" data-v="${esc(o)}" aria-pressed="${val === o}">${esc(o)}</button>`).join('')}</div></div>`;
+}
+function selectQ(key, label, options, val){
+  return `<div class="q"><div class="q-label">${label}${R}</div><select data-in="${key}"><option value="">Select…</option>${
+    options.map(o => `<option ${val === o ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select></div>`;
+}
+function textQ(key, label, val, required, ph = ''){
+  return `<div class="q"><div class="q-label">${label}${required ? R : O}</div><textarea data-in="${key}" placeholder="${esc(ph)}">${esc(val)}</textarea></div>`;
+}
+function senderInfo(m){ return m.sender === 'adviser' ? { name:CONFIG.ADVISER, sub:`Your Client Adviser · ${CONFIG.BRAND}`, ini:'P' } : { name:CONFIG.BRAND, sub:'Digital assistant', ini:'MV' }; }
+
+/* ============================================================
+   SCREENS
+   ============================================================ */
+const screens = {
+  welcome(){
+    return `${secTop()}<h1>How should premium brands message you?</h1>
+      <p>A short study on how fashion brands use personal information in their messages.</p>
+      <div class="card"><ul class="small" style="margin:0">
+        <li><b>8–10 minutes</b>, best on your phone</li>
+        <li>You'll follow a short story, then rate 8 chat messages</li>
+        <li>No name or contact details needed</li>
+        <li>For an MBA dissertation at the University of Greenwich</li></ul></div>
+      ${DONE_BEFORE ? '<div class="card"><b>You have already taken part on this device. Thank you!</b><br><span class="mute small">Each person should only respond once.</span></div>' : '<p class="mute small">You can stop at any time by closing this page.</p>'}`;
+  },
+  consent(){
+    const c = S.consent, row = (k, t) => `<label class="check"><input type="checkbox" data-c="${k}" ${c[k] ? 'checked' : ''}><span>${t}</span></label>`;
+    return `${secTop()}<h2>Before you begin</h2>
+      <div class="card">
+        ${row('age', 'I am 18 years old or above.')}
+        ${row('pdpa', 'I consent to my responses being collected and used <b>only for academic research</b> (an MBA dissertation), in line with Singapore\'s Personal Data Protection Act (PDPA). Responses are anonymous, stored securely, reported only in aggregate, and kept ${esc(CONFIG.RETENTION)}.')}
+        ${row('truth', 'I will answer honestly, to the best of my ability.')}
+        ${row('withdraw', 'I understand taking part is voluntary and I can stop at any time.')}
+      </div><p class="mute small">Questions or withdrawal requests: ${CONFIG.CONTACT_EMAIL ? `email <b>${esc(CONFIG.CONTACT_EMAIL)}</b> quoting your reference code (shown at the end).` : 'contact the researcher via the link you were sent, quoting your reference code (shown at the end).'}</p>`;
+  },
+  about(){
+    const a = S.about;
+    return `${secTop()}<h2>A little about you</h2>
+      ${selectQ('age_band', 'Age group', ['18–20','21–23','24–26','27–29','30–34','35–44','45+'], a.age_band)}
+      ${optsQ('gender', 'Gender', ['Female','Male','Non-binary','Prefer not to say'], a.gender, 'two')}
+      ${selectQ('nationality', 'Nationality', NATIONALITIES, a.nationality)}
+      ${a.nationality === 'Other' ? `<div class="q" style="margin-top:-10px"><input type="text" data-in="nationality_other" placeholder="Please specify" value="${esc(a.nationality_other)}"></div>` : ''}
+      ${selectQ('country_longest', 'Country you have lived in the longest', COUNTRIES, a.country_longest)}
+      ${optsQ('years_sg', 'How long have you lived in Singapore?', ['Born / raised here','More than 10 years','4–10 years','1–3 years','Less than 1 year','I don\'t live in Singapore'], a.years_sg)}
+      ${optsQ('premium_buyer', 'Do you consider yourself a premium shopper?', ['Yes','Somewhat','No'], a.premium_buyer, 'two')}
+      ${optsQ('spend_250', 'In the past 12 months, have you bought a fashion or lifestyle item costing S$250 or more?', ['Yes','No'], a.spend_250, 'two')}
+      ${textQ('premium_brands', 'Which brands feel "premium" to you? Name 1–3.', a.premium_brands, true, 'e.g. COS, Coach, Charles & Keith…')}
+      ${optsQ('ai_use', 'How often do you use AI chat tools (e.g. ChatGPT)?', ['Daily','Weekly','Monthly','Rarely or never'], a.ai_use, 'two')}
+      ${scaleQ({ key:'privacy_concern', label:'In general, I am concerned about how companies use my personal data.', lo:'Strongly disagree', hi:'Strongly agree' }, a.privacy_concern)}`;
+  },
+  story(){
+    const s = STORY[S.story];
+    const demo = s.demo ? `<div class="phone" style="margin-top:12px"><div class="chat-head"><span class="avatar">P</span><span><b>${CONFIG.ADVISER}</b>Your Client Adviser · ${CONFIG.BRAND}</span></div>
+      <div class="bubble">Hello! Your linen coat alteration is ready for collection whenever suits you.</div>
+      <div class="bubble me">Thank you! I'll pop by on Saturday.</div>
+      <div class="bubble">Lovely, see you then.</div></div>` : '';
+    return `${secTop()}<div class="panel"><div class="scene">${esc(s.scene)}</div><p>${s.text}</p>${demo}
+      <div class="storydots">${STORY.map((_, k) => `<i class="${k === S.story ? 'on' : ''}"></i>`).join('')}</div></div>`;
+  },
+  msg(){
+    const m = S.order[S.i], a = S.ans, si = senderInfo(m), s = score(m);
+    const dbg = DEBUG ? `<div class="debug">${m.id} · ${m.cell} · S${m.show} P${m.personal} Src${m.source} Pu${m.push} → C=${s} ${zone(s)} · ${quadrant(m)}</div>` : '';
+    let stim;
+    if (!S.revealed){
+      stim = `<div class="phone"><div class="lock">New message</div>
+        <button class="notif" type="button" id="open"><b>${esc(si.name)} · now</b>${m.type === 'stack' ? 'You have 4 notifications this week' : 'Tap to read your new message'}</button></div>
+        <p class="mute small" style="text-align:center">Tap the notification to open it</p>`;
+    } else if (m.type === 'stack'){
+      stim = `<div class="phone"><div class="lock">This week's notifications</div>${
+        m.items.map(([t, x], k) => `<div class="notif" style="animation-delay:${k * .25}s"><b>${esc(si.name)} · ${esc(t)}</b>${esc(x)}</div>`).join('')}</div>`;
+    } else {
+      stim = `<div class="phone"><div class="chat-head"><span class="avatar">${si.ini}</span><span><b>${esc(si.name)}</b>${esc(si.sub)}</span></div>
+        <div id="slot">${S.typed ? `<div class="bubble">${esc(m.text)}<div class="tile"><span class="img"></span><span>${SCARF}</span></div></div>` : '<div class="typing"><i></i><i></i><i></i></div>'}</div></div>`;
+    }
+    const qs = S.revealed && (m.type === 'stack' || S.typed) ? `
+      ${RATINGS.map(q => scaleQ(q, a[q.key])).join('')}
+      <div class="q"><div class="q-label">How does it make you feel? Pick up to 2.${R}</div><div class="chips">${
+        EMOTIONS.map(e => `<button type="button" data-chip="${e}" aria-pressed="${(a.emotions || []).includes(e)}">${e}</button>`).join('')}</div></div>
+      ${optsQ('author_guess', 'Who do you think wrote this?', AUTHOR, a.author_guess)}
+      ${S.i === ATTN_INDEX ? scaleQ({ key:'attn', label:'To show you are reading carefully, please tap 3.', lo:'', hi:'' }, a.attn) : ''}
+      ${textQ('why', 'Why do you feel this way?', a.why, !!m.why, 'A sentence is enough')}` : '';
+    return `${secTop()}<p class="mute" style="margin-bottom:8px">Message ${S.i + 1} of ${S.order.length}</p>${dbg}${stim}${qs}`;
+  },
+  wrap(){
+    const w = S.wrap, ids = ['A4','C1','C2'];
+    return `${secTop()}<h2>One last comparison</h2>
+      <p>Your anniversary is coming up. Which message would you most like to receive?${R}</p>
+      ${ids.map(id => { const m = MESSAGES.find(x => x.id === id), si = senderInfo(m);
+        return `<button class="choice" type="button" data-pick="${id}" aria-pressed="${w.pick === id}"><b>${esc(si.name)} · ${esc(si.sub)}</b>${esc(m.text)}</button>`; }).join('')}
+      ${scaleQ({ key:'realism', label:'Overall, how realistic were these messages?', lo:'Not at all realistic', hi:'Very realistic' }, w.realism)}
+      ${textQ('final_open', 'What makes a brand\'s message feel premium to you, rather than pushy or creepy?', w.final_open, true)}
+      <div class="q"><div class="q-label">Happy to be contacted for a short follow-up chat?${O}</div>
+        <input type="email" data-in="email" placeholder="Email (stored separately from your answers)" value="${esc(w.email)}"></div>`;
+  },
+  done(){
+    return `${secTop()}<h1>Thank you</h1><p>Your responses have been recorded. You can close this page now.</p><p class="mute small">Reference: ${esc(PID)}</p>`;
+  }
+};
+
+/* ============================================================
+   VALIDATION + BOTTOM BAR
+   ============================================================ */
+function ready(){
+  const a = S.about, w = S.wrap, ans = S.ans;
+  switch (S.step){
+    case 'welcome': return [!DONE_BEFORE, 'Thank you, you have already taken part'];
+    case 'consent': return [['age','pdpa','truth','withdraw'].every(k => S.consent[k]), 'Tick all four boxes to continue'];
+    case 'about': {
+      const ok = a.age_band && a.gender && a.nationality && (a.nationality !== 'Other' || (a.nationality_other || '').trim()) && a.country_longest &&
+        a.years_sg && a.premium_buyer && a.spend_250 && (a.premium_brands || '').trim().length >= 2 && a.ai_use && a.privacy_concern;
+      return [ok, 'Answer every question to continue'];
+    }
+    case 'story': return [true, ''];
+    case 'msg': {
+      const m = S.order[S.i];
+      if (!S.revealed || (m.type !== 'stack' && !S.typed)) return [false, 'Open the message first'];
+      const ok = RATINGS.every(q => ans[q.key]) && (ans.emotions || []).length > 0 && ans.author_guess && (S.i !== ATTN_INDEX || ans.attn) && (!m.why || (ans.why || '').trim().length >= 3);
+      return [ok, 'Answer every required question to continue'];
+    }
+    case 'wrap': return [w.pick && w.realism && (w.final_open || '').trim().length >= 3, 'Pick one message and answer the question'];
+    default: return [false, ''];
+  }
+}
+function updateBar(){
+  const [ok, msg] = ready();
+  const labels = { welcome:'Start', consent:'I agree, continue', about:'Continue', story: S.story < STORY.length - 1 ? 'Next' : 'Start the messages',
+    msg: S.i + 1 < S.order.length ? 'Next message' : 'Continue', wrap:'Submit' };
+  nextBtn.textContent = labels[S.step] || '';
+  nextBtn.style.display = S.step === 'done' ? 'none' : 'block';
+  nextBtn.disabled = !ok; hint.textContent = ok ? '' : msg;
+  const k = sectionOf(S.step);
+  dots.innerHTML = SECTIONS.map((_, j) => `<i class="${j === k ? 'on' : j < k ? 'done' : ''}" title="${SECTIONS[j]}"></i>`).join('');
+}
+function render(keepScroll){
+  const y = window.scrollY;
+  app.innerHTML = screens[S.step]();
+  window.scrollTo(0, keepScroll ? y : 0);
+  updateBar();
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+app.addEventListener('change', e => {
+  const t = e.target;
+  if (t.dataset.c){ S.consent[t.dataset.c] = t.checked; updateBar(); }
+  if (t.tagName === 'SELECT'){ S.about[t.dataset.in] = t.value; render(true); }
+});
+app.addEventListener('input', e => {
+  const k = e.target.dataset.in; if (!k || e.target.tagName === 'SELECT') return;
+  const target = S.step === 'about' ? S.about : S.step === 'wrap' ? S.wrap : S.ans;
+  target[k] = e.target.value; updateBar();
+});
+app.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.id === 'open'){
+    S.revealed = true; S.typed = false; S.t0 = performance.now(); render(true);
+    if (S.order[S.i].type !== 'stack') setTimeout(() => { S.typed = true; render(true); }, 1100);
+    return;
+  }
+  if (b.dataset.chip){
+    const list = S.ans.emotions || (S.ans.emotions = []), e2 = b.dataset.chip, at = list.indexOf(e2);
+    if (at >= 0) list.splice(at, 1); else { if (list.length >= 2) list.shift(); list.push(e2); }
+    render(true); return;
+  }
+  if (b.dataset.pick){ S.wrap.pick = b.dataset.pick; render(true); return; }
+  if (b.dataset.k){ (S.step === 'about' ? S.about : S.step === 'wrap' ? S.wrap : S.ans)[b.dataset.k] = b.dataset.v; render(true); }
+});
+window.addEventListener('beforeunload', e => { if (['story','msg','wrap'].includes(S.step)) { e.preventDefault(); e.returnValue = ''; } });
+nextBtn.addEventListener('click', () => { if (!nextBtn.disabled) next(); });
+
+function next(){
+  if (S.step === 'welcome') S.step = 'consent';
+  else if (S.step === 'consent') S.step = 'about';
+  else if (S.step === 'about'){
+    S.order = buildOrder();
+    const a = S.about, nat = a.nationality === 'Other' ? (a.nationality_other || '').trim() : a.nationality;
+    S.profile = { src:SRC, age_band:a.age_band, gender:a.gender, nationality:nat, country_longest:a.country_longest, years_sg:a.years_sg,
+      group: a.nationality === 'Singaporean' ? 'Singapore' : 'International',
+      premium_buyer:a.premium_buyer, spend_250:a.spend_250, premium_brands:(a.premium_brands || '').trim(), ai_use:a.ai_use, privacy_concern:+a.privacy_concern };
+    send('Participants', Object.assign({ status:'started', started_at:S.startedAt, consent:true, order:S.order.map(m => m.id).join(' '),
+      device:/Mobi/i.test(navigator.userAgent) ? 'mobile' : 'desktop' }, S.profile));
+    S.step = 'story'; S.story = 0;
+  }
+  else if (S.step === 'story'){
+    if (S.story < STORY.length - 1) S.story++;
+    else { S.step = 'msg'; S.i = 0; S.ans = {}; S.revealed = false; S.typed = false; }
+  }
+  else if (S.step === 'msg'){
+    const m = S.order[S.i], s = score(m), a = S.ans;
+    send('Responses', Object.assign({ order_index:S.i + 1, msg_id:m.id, block:m.block, cell:m.cell, sender:m.sender,
+      f_show:m.show, f_personal:m.personal, f_source:m.source, f_push:m.push, pred_score:s, pred_zone:zone(s), quadrant:quadrant(m),
+      r_premium:+a.r_premium, r_creepy:+a.r_creepy, r_knows:+a.r_knows, r_intent:+a.r_intent,
+      emotions:(a.emotions || []).join('|'), attn: S.i === ATTN_INDEX ? +a.attn : '', author_guess:a.author_guess, why:(a.why || '').trim(),
+      ms_on_screen:Math.round(performance.now() - S.t0) }, { group:S.profile.group, nationality:S.profile.nationality }));
+    if (S.i === ATTN_INDEX) S.attnPass = +a.attn === 3;
+    S.i++; S.ans = {}; S.revealed = false; S.typed = false;
+    if (S.i >= S.order.length) S.step = 'wrap';
+  }
+  else if (S.step === 'wrap'){
+    send('Participants', Object.assign({ status:'completed', started_at:S.startedAt, finished_at:new Date().toISOString(),
+      final_pick:S.wrap.pick, realism:+S.wrap.realism, attn_pass:!!S.attnPass, final_open:(S.wrap.final_open || '').trim() }, S.profile));
+    try { if (!TEST) localStorage.setItem('wgs_done', '1'); } catch (e) {}
+    if ((S.wrap.email || '').trim()) send('FollowUp', { email:S.wrap.email.trim() }, true); // no pid: not linkable to answers
+    S.step = 'done';
+  }
+  render();
+}
+
+render();
+</script>
+</body>
+</html>

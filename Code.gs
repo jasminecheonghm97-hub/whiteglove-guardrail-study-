@@ -14,7 +14,7 @@ function doPost(e) {
     const data = JSON.parse(e.postData.contents);
     const name = ALLOWED_SHEETS.indexOf(data.sheet) >= 0 ? data.sheet : 'Responses';
     const row = data.row || {};
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SpreadsheetApp.openById('1LHXln8ZFcOi3SS-d632gfJ9a6aaLgQZdk_LIH3NXz4M'); // Whiteglove Guardrail Study Data
     const sh = ss.getSheetByName(name) || ss.insertSheet(name);
 
     const headers = sh.getLastRow() > 0
