@@ -1,2 +1,2 @@
-# whiteglove-guardrail-study-
+# whiteglove-guardrail-study
 Whiteglove Guardrail Study
